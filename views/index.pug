@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .row
+    h2.center-align.valign FCC Voting App by HeyJp
+  .row.valign-wrapper
+    .col.s6
+      if (!user)
+        a(href="/login") Login
+        br
+        a(href="/register") Register
+      if (user)
+        p You are currently logged in as #{user.username}
+        a(href="/logout") Logout
+    .col.s6
+      ul.collection
+        - for (var i = 0; i < data.length; ++i) {
+        li.collection-item
+          a(class="confirm" href='/poll/'+data[i])= pollsTitle[i]
+        - }

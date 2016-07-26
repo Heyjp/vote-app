@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  script(src='/javascripts/options.js')
+  .row
+    .col.s6
+      form(role='form', action="/create",method="post")
+            h2.form-signin-heading
+            .form-group
+              input.form-control(type='text', placeholder='Poll Title', name='title', required='', autofocus='')
+              input.form-control(type='text', placeholder='Poll Option #1', name='user[option-0]', required='')
+              input.form-control(type='text', placeholder='Poll Option #2', name='user[option-1]', required='', autofocus='')
+              #extra-options
+              a(href='#' id="create-new-option") Add New Option
+              button.btn.btn-primary.option-submitter(type='submit') Create Poll

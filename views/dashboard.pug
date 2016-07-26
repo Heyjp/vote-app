@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h2 Delete Polls
+  .row
+    .col.s6
+        ul.collection
+          - for (var i = 0; i < data.length; ++i) {
+          li.collection-item
+            a(class="delete-poll" href='/poll/delete/'+data[i])= title[i]
+          - }

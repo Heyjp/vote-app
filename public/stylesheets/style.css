@@ -1,0 +1,47 @@
+nav li a {
+
+  color: #212121;
+}
+
+.nav-wrapper a {
+  color: #212121 !important;
+}
+
+.form-handler {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-vote a {
+
+  text-align: right;
+  display: block;
+
+}
+
+#create-new-option {
+float: right;
+display: block;
+}
+
+.no-contain {
+  display: flex;
+}
+
+.no-contain input {
+  padding-left: 0px !important;
+  margin: 0px 0px 15px 0px !important;
+}
+
+.no-contain a {
+  align-self: flex-end;
+  padding-left: 2px;
+}
+
+.option-submitter {
+
+  display: block;
+}

@@ -1,0 +1,21 @@
+nav.amber.lighten-4
+      .nav-wrapper
+        a.brand-logo.center(href='#') Logo
+          if user
+            ul#nav-mobile.left.hide-on-med-and-down
+              li
+                a(href='/') Home
+              li
+                a(href='/create') Create
+              li
+                a(href='/logout') Logout
+              li
+                a(href='/dashboard') Dashboard
+          if !user
+            ul#nav-mobile.left.hide-on-med-and-down
+              li
+                a(href='/') Home
+              li
+                a(href='/login') Login
+              li
+                a(href='/register') Register

@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  script(src='/javascripts/options.js')
+  .row
+    .col.s6
+      canvas#myChart
+      script(type='text/javascript').
+        var local_data =!{JSON.stringify(poll)}
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+        labels: local_data.labels,
+        datasets: [{
+        label: '# of Votes',
+        data: local_data.votes,
+        backgroundColor: local_data.colors,
+        borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+        ]
+        }]
+        }
+        });
+    .col.s6
+      form.form-vote(method="post", action='/poll/vote')
+        input(type='hidden', name='poll_id' value=""+ poll.id)
+        .input-field
+          select(name="poll_choice" id="selector")
+            option(value='', disabled='', selected='') Choose your option
+            each item, index in poll.labels
+              option(name=""+ index value="" +index)= index + ": " + item
+          label Materialize Select
+        #custom-option
+          a(href="#" id="add-option") Add new Category
+        button.btn.waves-effect.waves-light(type='submit', name='action') Cast Your Vote
+            i.material-icons.right
