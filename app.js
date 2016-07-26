@@ -1,7 +1,6 @@
 // dependencies
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -19,8 +18,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set("view options", { layout: "layout.pug" });
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -48,7 +45,7 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
-mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds029585.mlab.com:29585/heroku_2fg3rnjx');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
