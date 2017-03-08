@@ -22,6 +22,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(require('express-session')({
     secret: 'keyboard cat',
     resave: false,
@@ -46,7 +47,7 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // mongoose
-mongoose.connect('mongodb://sponjeh:origin@ds029585.mlab.com:29585/heroku_2fg3rnjx');
+mongoose.connect(process.env.MONGO_KEY);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
