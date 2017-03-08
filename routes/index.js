@@ -5,6 +5,15 @@ var router = express.Router();
 
 var Polls = require('../config/polls')
 
+
+router.get('/favicon.ico', function(req, res) {
+  console.log("favicon requested");
+  res.writeHead(200, {'Content-Type': 'image/x-icon'} );
+  res.end();
+  console.log('favicon requested');
+  return;
+});
+
 router.get('/', function(req, res, next) {
 
   var pollsArray = [];
