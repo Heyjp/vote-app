@@ -15,7 +15,7 @@ nav li a {
   justify-content: center;
 }
 
-.form-vote a {
+#custom-option {
 
   text-align: right;
   display: block;
@@ -44,4 +44,29 @@ display: block;
 .option-submitter {
 
   display: block;
+}
+
+.main-body {
+  min-height: 80vh;
+}
+
+
+form button {
+  margin: 0px 5px;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+#custom-option {
+  margin-bottom: 10px;
+}
+
+
+@media only screen
+  and (max-width: 600px) {
+    .submit-choice {
+      width: 100%;
+    }
 }

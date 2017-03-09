@@ -3,7 +3,9 @@ extends layout
 block content
   script(src='/javascripts/options.js')
   .row
-    .col.s6
+    .col.s12.m12.l12.center
+      h3.title #{poll.title}
+    .col.s12.m6.l6
       canvas#myChart
       script(type='text/javascript').
         var local_data =!{JSON.stringify(poll)}
@@ -27,7 +29,7 @@ block content
         }]
         }
         });
-    .col.s6
+    .col.s12.m6.l6
       form.form-vote(method="post", action='/poll/vote')
         input(type='hidden', name='poll_id' value=""+ poll.id)
         .input-field
@@ -35,8 +37,8 @@ block content
             option(value='', disabled='', selected='') Choose your option
             each item, index in poll.labels
               option(name=""+ index value="" +index)= index + ": " + item
-          label Materialize Select
+          label Options
         #custom-option
-          a(href="#" id="add-option") Add new Category
-        button.btn.waves-effect.waves-light(type='submit', name='action') Cast Your Vote
-            i.material-icons.right
+          a(href="#" id="add-option" class="new-choice") Add new Category
+        a.btn.waves-effect.waves-light.submit-choice(type='submit', name='action') Cast Your Vote
+                i.material-icons.right

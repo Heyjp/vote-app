@@ -3,6 +3,8 @@
 
    $('select').material_select();
 
+    $(".button-collapse").sideNav();
+
    $('#custom-option').on("click", "#add-option", function () {
       $('#custom-option').html('<input type="text" id="new-option" name="customOption" placeholder="Your new choice"><a class="cancel" href="#" id="cancel-option">Cancel Entry</a>');
       $(select).hide();

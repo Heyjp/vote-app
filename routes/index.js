@@ -94,6 +94,7 @@ router.get('/ping', function(req, res){
     router.get('/poll/:id', function(req, res) {
         var id = req.params.id;
         Polls.findOnePoll(id, function(err, data) {
+            console.log(data, "this is data");
             data.date = "";
               res.render('chart', {
                   poll: data
