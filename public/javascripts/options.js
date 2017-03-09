@@ -7,12 +7,12 @@
 
    $('#custom-option').on("click", "#add-option", function () {
       $('#custom-option').html('<input type="text" id="new-option" name="customOption" placeholder="Your new choice"><a class="cancel" href="#" id="cancel-option">Cancel Entry</a>');
-      $(select).hide();
+      $('select').hide();
    });
 
    $('#custom-option').on("click", '.cancel', function () {
      $('#custom-option').html('<a href="#" id="add-option">Add new category</a>');
-     $(select).show();
+     $('select').show();
   });
 
    $("#create-new-option").unbind().click(function() {

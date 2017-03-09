@@ -105,6 +105,7 @@ router.get('/ping', function(req, res){
 
     // POLL HANDLER FOR VOTING
     router.post('/poll/vote', function(req, res) {
+        console.log("posting vote", req.body);
         var voterId;
         if (req.user) {
           voterId = req.user.username
