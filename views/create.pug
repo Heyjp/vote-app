@@ -1,6 +1,11 @@
-extends layout
+extends sublayout
 
-block content
+
+block hero
+  h4 Create your own Poll
+  p Default is two options, but feel free to add as many answers you feel necessary.
+
+block main-content
   script(src='/javascripts/options.js')
   .row
     .col.s6

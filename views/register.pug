@@ -1,9 +1,12 @@
-extends layout
+extends sublayout.pug
 
-block content
+block hero
+  h3 Register
+  p All information will be saved and cannot be retrieved.
+  p feel free to make a million accounts. On second thoughts... don't ;)
+
+block main-content
   .form-handler
-    h1 Register
-    br
     form(role='form', action="/register",method="post", style='max-width: 300px;')
       .form-group
           input.form-control(type='text', name="username", placeholder='Enter Username')

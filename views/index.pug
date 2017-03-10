@@ -1,11 +1,7 @@
-extends layout
+extends sublayout.pug
 
-block content
-  section.main-body
-    .row.valign-wrapper
-      .col.s10.offset-s1
-        ul.collection
-          - for (var i = 0; i < data.length; ++i) {
-          li.collection-item
-            a(class="confirm" href='/poll/'+data[i])= pollsTitle[i]
-          - }
+block hero
+  h4 Polls Polls
+  h6 An FCC Voting App
+  p PollsPolls is a web based voting application that allows you to create, delete, and alter all polls.
+  p The app is built with Node.js, Express, Pug & Chart.js.

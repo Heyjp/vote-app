@@ -1,10 +1,12 @@
-extends layout
+extends sublayout
 
-block content
+block hero
+  .col.s12.m12.l12.center
+    h3.title #{poll.title}
+
+block main-content
   script(src='/javascripts/options.js')
   .row
-    .col.s12.m12.l12.center
-      h3.title #{poll.title}
     .col.s12.m6.l6
       canvas#myChart
       script(type='text/javascript').

@@ -1,10 +1,12 @@
-extends layout
+extends sublayout
 
-block content
-  h1= user
+block hero
+  h3 Login
+  p Remember those details you did / did not make 5 seconds ago?
+
+
+block main-content
   .form-handler
-    h1 Login
-    br
     form(role='form', action="/login",method="post", style='max-width: 300px;')
       .form-group
           input.form-control(type='text', name="username", placeholder='Enter Username')

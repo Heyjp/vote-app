@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  section.main-body
+    .row.valign-wrapper
+      .col.s12.m12.l12
+        section.main.light-blue.lighten-2
+          .col.s12.m12.l12.center-align
+            block hero
+              p hero content in sublayout
+  section.main-content.polls
+    block main-content
+        .col.s10.m10.l10.offset-l1
+          ul.collection
+            - for (var i = 0; i < data.length; ++i) {
+            li.collection-item
+              a(class="confirm" href='/poll/'+data[i])= pollsTitle[i]
+            - }
