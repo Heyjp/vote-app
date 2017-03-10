@@ -1,6 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
+  min-height: 100vh;
 }
 
 nav li a {
@@ -79,4 +80,8 @@ form button {
 
 .main-body .col {
   padding: 0px;
+}
+
+.main-content {
+  min-height: 36vh;
 }
