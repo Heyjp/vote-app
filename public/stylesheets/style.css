@@ -85,3 +85,7 @@ form button {
 .main-content {
   min-height: 36vh;
 }
+
+#create-new-option {
+  margin-top: 15px;
+}

@@ -8,13 +8,19 @@ block hero
 block main-content
   script(src='/javascripts/options.js')
   .row
-    .col.s6
+    .col.s12.l6.m6.offset-l3.offset-m3
       form(role='form', action="/create",method="post")
             h2.form-signin-heading
             .form-group
-              input.form-control(type='text', placeholder='Poll Title', name='title', required='', autofocus='')
-              input.form-control(type='text', placeholder='Poll Option #1', name='user[option-0]', required='')
-              input.form-control(type='text', placeholder='Poll Option #2', name='user[option-1]', required='', autofocus='')
+              .input-field.col.s12
+                input.form-control(type='text', placeholder='What is your Question?', name='title', required='', autofocus='')
+                label(for='title') Question
+              .input-field.col.s12
+                input.form-control(type='text', placeholder='Poll Option #1', name='user[option-0]', required='')
+                label(for='title') Answer #1
+              .input-field.col.s12
+                input.form-control(type='text', placeholder='Poll Option #2', name='user[option-1]', required='', autofocus='')
+                label(for='title') Answer #2
               #extra-options
               a(href='#' id="create-new-option") Add New Option
               button.btn.btn-primary.option-submitter(type='submit') Create Poll

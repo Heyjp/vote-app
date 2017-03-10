@@ -19,17 +19,23 @@
      options++;
 
      var newDiv = $("<div/>",  {
-       class: "no-contain"
+       class: "no-contain input-field col s12 m12 l12"
      });
 
      var input = $( "<input/>", {
        type: "text",
-       class: "new-poll-choice col s11",
+       class: "new-poll-choice",
        name: "option" + options,
        placeholder: "Poll Option #" + options,
         class: "new",
         href: "foo.html"
       });
+
+
+      var label = $('<label/>', {
+        for: "option" + options,
+        text: "Answer #" + options
+      })
 
       var newAnchor = $('<a/>', {
         class: "clickers",
@@ -42,9 +48,12 @@
       });
 
         $(newAnchor).append(newIcon);
+        $(newDiv).append(label);
         $(newDiv).append(input);
         $(newDiv).append(newAnchor);
-        $('#extra-options').append(newDiv);
+        $('#extra-options').append(newDiv)
+        $(input).focus();
+
 
    });
 
