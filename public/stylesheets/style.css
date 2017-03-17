@@ -126,3 +126,22 @@ form button {
   left: 65px;
   bottom: 20px
 }
+
+.nav-wrapper a {
+  font-weight: 500;
+  font-size: 1em;
+  color: white !important;
+}
+
+.btn {
+  background-color: #ef9a9a;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #b71c1c;
+}
+
+.side-nav a {
+  color: black !important;
+}

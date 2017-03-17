@@ -13,16 +13,17 @@ block content
         .container
           .row
             .col.s12.m6.l6
-              .card.blue-grey.darken-1
-                .card-content.white-text
+              .card.grey.lighten-2
+                .card-content.black-text
                   span.card-title The Stories
                   ul
                     li As a logged in user you can create and delete your own polls
+                    br
                     li For those not logged in, you can vote on any poll as well as add in your own options
             .col.s12.m6.l6
-              div.card-panel.teal.lighten-2
+              div.card-panel.red.darken-4.white-text
                 h5 The Polls
               div.collection
                 - for (var i = 0; i < data.length; ++i) {
-                a.collection-item.center(class="confirm" href='/poll/'+data[i])= pollsTitle[i]
+                a.collection-item.center.black-text(class="confirm" href='/poll/'+data[i])= pollsTitle[i]
                 - }
